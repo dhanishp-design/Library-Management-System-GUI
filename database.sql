@@ -1,0 +1,37 @@
+CREATE DATABASE IF NOT EXISTS LibraryDB;
+USE LibraryDB;
+
+CREATE TABLE IF NOT EXISTS Librarian (
+    LibrarianID INT PRIMARY KEY AUTO_INCREMENT,
+    Username VARCHAR(50) UNIQUE NOT NULL,
+    Password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Book (
+    BookID INT PRIMARY KEY AUTO_INCREMENT,
+    Title VARCHAR(255) NOT NULL,
+    Author VARCHAR(255) NOT NULL,
+    Status ENUM('Available', 'Issued') DEFAULT 'Available'
+);
+
+CREATE TABLE IF NOT EXISTS Student (
+    StudentID INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(255) NOT NULL,
+    Class VARCHAR(50) NOT NULL,
+    Contact VARCHAR(15) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Issue (
+    IssueID INT PRIMARY KEY AUTO_INCREMENT,
+    StudentID INT NOT NULL,
+    BookID INT NOT NULL,
+    IssueDate DATE NOT NULL,
+    ReturnDate DATE,
+    FOREIGN KEY (StudentID) REFERENCES Student(StudentID) ON DELETE CASCADE,
+    FOREIGN KEY (BookID) REFERENCES Book(BookID) ON DELETE CASCADE
+);
+
+-- Insert a default librarian account: admin / admin123
+-- The password 'admin123' hashed with SHA-256 is:
+-- 240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9
+INSERT IGNORE INTO Librarian (Username, Password) VALUES ('admin', '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9');
