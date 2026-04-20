@@ -95,7 +95,12 @@ User → Java Swing GUI → JDBC → MySQL Database
 - MySQL Server
 - JDBC Driver (MySQL Connector)
 - IDE (Eclipse Or VS)
+---
+## Output - 
 
+<img width="1919" height="1019" alt="Screenshot 2026-04-19 234040" src="https://github.com/user-attachments/assets/cfbe0cee-a8b9-450c-89bf-74871e5ee6c8" />
+
+  
 ---
 ## 🚀 Future Enhancements
 - Web-based version
