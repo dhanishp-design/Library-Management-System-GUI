@@ -31,7 +31,6 @@ CREATE TABLE IF NOT EXISTS Issue (
     FOREIGN KEY (BookID) REFERENCES Book(BookID) ON DELETE CASCADE
 );
 
--- Insert a default librarian account: admin / admin123
 -- The password 'admin123' hashed with SHA-256 is:
 -- 240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9
 INSERT IGNORE INTO Librarian (Username, Password) VALUES ('admin', '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9');
