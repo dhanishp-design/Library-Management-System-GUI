@@ -117,4 +117,4 @@ The Library Management System provides an efficient and structured way to manage
 ---
 ## 👨‍💻 Author
 
-**DHANISH H POOJARY**
+**DHANISH H POOJARY** & **ASHWINI POOJARI**
