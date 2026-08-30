@@ -112,7 +112,7 @@ User → Java Swing GUI → JDBC → MySQL Database
 ---
 ## 🏁 Conclusion
 
-The Library Management System provides an efficient and structured way to manage library resources. It reduces manual work, improves accuracy, and ensures better organization of data through a simple and intuitive interface.
+The Library Management System provides an Efficient and Structured way to manage Library Resources. It reduces manual work, improves accuracy, and ensures better organization of data through a simple and intuitive interface.
 
 ---
 ## 👨‍💻 Author
